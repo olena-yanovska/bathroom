@@ -1,12 +1,12 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
+// scene and camera setup
 const scene = new THREE.Scene();
 let camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 camera.position.set(0, 0, 0);
 
-// Light
-
+// Light setup
 let ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
 scene.add(ambientLight);
 
@@ -22,12 +22,12 @@ let container = document.getElementById('container');
 
 scene.background = new THREE.Color(0xffffff);
 
+// renderer setup
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
 container.appendChild( renderer.domElement );
 
 // Loading 3d model
-
 const loader = new GLTFLoader();
 let bathroom;
 
@@ -43,7 +43,7 @@ loader.load('babylonBathroom.glb', function (gltf) {
   scene.add(bathroom);
 });
 
-// Changing on scrolling
+// Change on scrolling
 function onDocumentMouseWheel(event) {
   let delta = event.deltaY;
 

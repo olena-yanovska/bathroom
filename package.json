@@ -1,5 +1,4 @@
 {
-  "homepage": ".",
   "dependencies": {
     "three": "^0.151.3"
   },
