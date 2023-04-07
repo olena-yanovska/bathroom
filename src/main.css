@@ -1,0 +1,24 @@
+body,
+p { 
+  margin: 0; 
+  padding: 0;
+}
+
+.textures {
+  position: absolute; 
+  top: 40%; 
+  right: 20px; 
+  width: 200px; 
+  border: 1px solid grey; 
+  background: rgb(255, 255, 255); 
+  display: flex; 
+  flex-wrap: wrap;
+}
+
+.image {
+  width: 50px;
+}
+
+.image-title {
+  font-size: 9px;
+text-align: center;}
